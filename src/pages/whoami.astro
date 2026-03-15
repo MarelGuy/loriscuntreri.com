@@ -1,0 +1,29 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout>
+    <section
+        class="min-h-screen flex flex-col items-center justify-center grow max-w-2xl mx-auto px-6 text-center pb-20"
+    >
+        <h1 class="text-black text-6xl font-black tracking-wide mb-16">-</h1>
+
+        <p class="space-y-4 mb-20 w-full px-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+            corrupti nulla voluptatum expedita, ullam voluptatibus blanditiis
+            facere sapiente fugit repellendus nobis quam numquam excepturi
+            minima similique consequuntur. In, corrupti perferendis!
+        </p>
+    </section>
+
+    <a
+        href="/projects"
+        class="bg-cyan-50 text-cyan-600 font-bold text-xl px-10 py-4 rounded-full
+  shadow-[0_0_15px_rgba(8,145,178,0.4)]
+  hover:shadow-[0_0_30px_rgba(8,145,178,0.7)] hover:-translate-y-1 hover:scale-105
+  transition-all duration-300 ease-out"
+    >
+        Vedi i miei progetti
+    </a>
+</MainLayout>

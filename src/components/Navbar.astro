@@ -1,0 +1,36 @@
+---
+// src/components/Navbar.astro
+
+let current_path = Astro.url.pathname;
+let current_page = current_path === `/` ? `/` : current_path.replace(/\/S/, "");
+
+const links = [
+    { label: "Home", href: "/" },
+    { label: "Chi sono", href: "/whoami" },
+    { label: "Progetti", href: "/projects" },
+    { label: "CV", href: "/cv" },
+];
+---
+
+<nav
+    class="fixed top-0 left-0 w-full z-50 bg-transparent flex justify-center items-center gap-12 pt-8 pb-4"
+>
+    {
+        links.map((link) => {
+            const isActive = current_page === link.href;
+
+            return (
+                <a
+                    href={link.href}
+                    class={
+                        isActive
+                            ? "bg-cyan-50 px-8 py-2 font-bold text-cyan-700  rounded-full shadow-md"
+                            : "bg-black px-8 py-2 font-bold text-lg hover:text-cyan-300 transition-colors rounded-full drop-shadow-md"
+                    }
+                >
+                    {link.label}
+                </a>
+            );
+        })
+    }
+</nav>
