@@ -1,0 +1,42 @@
+---
+// src/components/ScrollTracker.astro
+---
+
+<script>
+    const updateScrollDepth = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const maxScrollableDistance = scrollHeight - clientHeight;
+
+        const scrollPercentage =
+            maxScrollableDistance > 0
+                ? Math.round((scrollTop / maxScrollableDistance) * 100)
+                : 0;
+
+        window.latestScrollPercentage = scrollPercentage;
+    };
+
+    const restoreScrollPosition = () => {
+        const savedPercentage = sessionStorage.getItem("savedScroll");
+
+        if (savedPercentage !== null) {
+            const percentage = parseInt(savedPercentage, 10);
+
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+            const maxScroll = scrollHeight - clientHeight;
+
+            const targetPixel = (percentage / 100) * maxScroll;
+
+            window.scrollTo({ top: targetPixel, behavior: "instant" });
+
+            sessionStorage.removeItem("savedScroll");
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", restoreScrollPosition);
+
+    window.addEventListener("scroll", updateScrollDepth);
+    updateScrollDepth();
+</script>

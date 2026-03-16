@@ -1,5 +1,8 @@
 ---
 // src/components/Footer.astro
+
+let { homeHref, whoami, whoamiHref, projects, projectsHref, cvHref } =
+    Astro.props;
 ---
 
 <footer
@@ -14,22 +17,22 @@
             <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-bold mb-2">Link Diretti</h3>
                 <a
-                    href="/"
+                    href={homeHref}
                     class="text-lg text-gray-300 hover:text-cyan-300 transition-colors"
                     >Home</a
                 >
                 <a
-                    href="/chi-sono"
+                    href={whoamiHref}
                     class="text-lg text-gray-300 hover:text-cyan-300 transition-colors"
-                    >Chi Sono</a
+                    >{whoami}</a
                 >
                 <a
-                    href="/progetti"
+                    href={projectsHref}
                     class="text-lg text-gray-300 hover:text-cyan-300 transition-colors"
-                    >Progetti</a
+                    >{projects}</a
                 >
                 <a
-                    href="/cv"
+                    href={cvHref}
                     class="text-lg text-gray-300 hover:text-cyan-300 transition-colors"
                     >CV</a
                 >

@@ -1,14 +1,17 @@
 ---
 // src/components/Navbar.astro
 
-let current_path = Astro.url.pathname;
-let current_page = current_path === `/` ? `/` : current_path.replace(/\/S/, "");
+let currentPath = Astro.url.pathname;
+
+let isEnglish = currentPath.startsWith("/en");
+
+let currentPage = currentPath === `/` ? `/` : currentPath.replace(/\/S/, "");
 
 const links = [
-    { label: "Home", href: "/" },
-    { label: "Chi sono", href: "/whoami" },
-    { label: "Progetti", href: "/projects" },
-    { label: "CV", href: "/cv" },
+    { labelIt: "Home", labelEn: "Home", href: "/home" },
+    { labelIt: "Chi sono", labelEn: "Who am I", href: "/whoami" },
+    { labelIt: "Progetti", labelEn: "Projects", href: "/projects" },
+    { labelIt: "CV", labelEn: "CV", href: "/cv" },
 ];
 ---
 
@@ -17,18 +20,18 @@ const links = [
 >
     {
         links.map((link) => {
-            const isActive = current_page === link.href;
+            let href = (isEnglish ? "/en" : "/it") + link.href;
 
             return (
                 <a
-                    href={link.href}
+                    href={href}
                     class={
-                        isActive
+                        currentPage === href
                             ? "bg-cyan-50 px-8 py-2 font-bold text-cyan-700  rounded-full shadow-md"
                             : "bg-black px-8 py-2 font-bold text-lg hover:text-cyan-300 transition-colors rounded-full drop-shadow-md"
                     }
                 >
-                    {link.label}
+                    {isEnglish ? link.labelEn : link.labelIt}
                 </a>
             );
         })
