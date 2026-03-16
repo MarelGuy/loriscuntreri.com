@@ -1,0 +1,48 @@
+---
+// src/components/LanguageToggle.astro
+---
+
+<button
+    id="lang-toggle"
+    class="fixed bottom-6 left-6 z-50 flex items-center justify-center gap-2 bg-[#111] text-white border border-gray-700 px-4 py-2 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:scale-105 hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(8,145,178,0.4)] transition-all duration-300"
+    title="Swap Language"
+>
+    <span
+        id="flag-it"
+        class="text-xl transition-all duration-300 drop-shadow-md">🇮🇹</span
+    >
+
+    <span class="text-sm font-bold text-gray-500">/</span>
+
+    <span
+        id="flag-en"
+        class="text-xl opacity-40 grayscale transition-all duration-300"
+        >🇬🇧</span
+    >
+</button>
+
+<script>
+    const toggleBtn = document.getElementById("lang-toggle");
+    const flagIt = document.getElementById("flag-it");
+    const flagEn = document.getElementById("flag-en");
+
+    let currentLang = "it";
+
+    toggleBtn?.addEventListener("click", () => {
+        if (currentLang === "it") {
+            currentLang = "en";
+            flagIt?.classList.add("opacity-40", "grayscale");
+            flagIt?.classList.remove("drop-shadow-md");
+
+            flagEn?.classList.remove("opacity-40", "grayscale");
+            flagEn?.classList.add("drop-shadow-md");
+        } else {
+            currentLang = "it";
+            flagEn?.classList.add("opacity-40", "grayscale");
+            flagEn?.classList.remove("drop-shadow-md");
+
+            flagIt?.classList.remove("opacity-40", "grayscale");
+            flagIt?.classList.add("drop-shadow-md");
+        }
+    });
+</script>

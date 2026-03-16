@@ -4,6 +4,7 @@ import "../styles/global.css";
 
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import LanguageToggle from "../components/LanguageToggle.astro";
 ---
 
 <html lang="it">
@@ -16,6 +17,8 @@ import Footer from "../components/Footer.astro";
 
     <body class="bg-black font-sans text-white">
         <Navbar />
+
+        <LanguageToggle />
 
         <div class="min-h-screen flex flex-col">
             <slot />
