@@ -5,7 +5,7 @@ let currentPath = Astro.url.pathname;
 
 let isEnglish = currentPath.startsWith("/en");
 
-let currentPage = currentPath === `/` ? `/` : currentPath.replace(/\/S/, "");
+let currentPage = currentPath === `/` ? `/` : currentPath.replace(/\/$/, "");
 
 const links = [
     { labelIt: "Home", labelEn: "Home", href: "/home" },
