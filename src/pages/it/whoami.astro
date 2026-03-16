@@ -1,6 +1,18 @@
 ---
 // src/pages/it/whoami.astro
+import WhoAmI from "../../components/pages/WhoAmI.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+    <WhoAmI
+        text="
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda, officiis quam similique adipisci vitae est eos harum atque veritatis sed rem? Non voluptatibus culpa optio eum. Quisquam, dignissimos porro."
+        buttonText="Vedi i miei progetti"
+        buttonHref="/it/projects"
+        contactTitle="Contattami"
+        mailLabel="Via email"
+        linkedinLabel="Su LinkedIn"
+        githubLabel="Su Github"
+    />
+</MainLayout>
