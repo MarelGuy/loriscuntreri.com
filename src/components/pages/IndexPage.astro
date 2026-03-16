@@ -1,8 +1,7 @@
 ---
 import Star from "../Star.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
 
-const { desc, project_text, why_choose_me, p_1, p_2, p_3 } = Astro.props;
+const { desc, projectText, projectHref, whyChooseMe, p1, p2, p3 } = Astro.props;
 ---
 
 <section
@@ -17,13 +16,13 @@ const { desc, project_text, why_choose_me, p_1, p_2, p_3 } = Astro.props;
   </p>
 
   <a
-    href="/projects"
+    href={projectHref}
     class="bg-cyan-50 text-cyan-600 font-bold text-xl px-10 py-4 rounded-full
   shadow-[0_0_15px_rgba(8,145,178,0.4)]
   hover:shadow-[0_0_30px_rgba(8,145,178,0.7)] hover:-translate-y-1 hover:scale-105
   transition-all duration-300 ease-out"
   >
-    {project_text}
+    {projectText}
   </a>
 </section>
 
@@ -34,7 +33,7 @@ const { desc, project_text, why_choose_me, p_1, p_2, p_3 } = Astro.props;
     <h2
       class="text-4xl font-black text-center text-cyan-600 mb-20 tracking-wide"
     >
-      {why_choose_me}
+      {whyChooseMe}
     </h2>
 
     <div class="flex flex-col gap-16">
@@ -42,13 +41,13 @@ const { desc, project_text, why_choose_me, p_1, p_2, p_3 } = Astro.props;
         <Star />
 
         <div class="space-y-4 w-full max-w-sm">
-          {p_1}
+          {p1}
         </div>
       </div>
 
       <div class="flex text-black items-center justify-center gap-10">
         <div class="space-y-4 w-full max-w-sm">
-          {p_2}
+          {p2}
         </div>
 
         <Star />
@@ -58,7 +57,7 @@ const { desc, project_text, why_choose_me, p_1, p_2, p_3 } = Astro.props;
         <Star />
 
         <div class="space-y-4 w-full max-w-sm">
-          {p_3}
+          {p3}
         </div>
       </div>
     </div>
