@@ -33,21 +33,21 @@ const isEnglish = Astro.url.pathname.startsWith("/en");
             {
                 isEnglish ? (
                     <Footer
-                        homeHref="/en/"
+                        homeHref="/en/home"
                         whoami="Who am I"
                         whoamiHref="/en/whoami"
                         projects="Projects"
                         projectsHref="/en/projects"
-                        cvHref="/en/cv"
+                        cvHref="/en/Loris_Cuntreri_CV.pdf"
                     />
                 ) : (
                     <Footer
-                        homeHref="/"
+                        homeHref="/it/home"
                         whoami="Chi sono"
-                        whoamiHref="/whoami"
+                        whoamiHref="/it/whoami"
                         projects="Progetti"
-                        projectsHref="/projects"
-                        cvHref="/cv"
+                        projectsHref="/it/projects"
+                        cvHref="/it/Loris_Cuntreri_CV.pdf"
                     />
                 )
             }
