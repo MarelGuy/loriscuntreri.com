@@ -1,0 +1,13 @@
+---
+const pathname = Astro.url.pathname;
+
+let redirectPath = "/en/home";
+
+if (pathname.startsWith("/it/") || pathname === "/it") {
+    redirectPath = "/it/home";
+} else if (pathname.startsWith("/en/") || pathname === "/en") {
+    redirectPath = "/en/home";
+}
+
+return Astro.redirect(redirectPath);
+---
