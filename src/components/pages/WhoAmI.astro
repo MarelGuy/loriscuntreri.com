@@ -4,6 +4,7 @@
 const {
     headline,
     text,
+    contactMeText,
     buttonText,
     buttonHref,
     contactTitle,
@@ -36,18 +37,32 @@ const {
         </div>
     </div>
 
-    <a
-        href={buttonHref}
-        class="bg-cyan-50 text-cyan-600 font-bold text-xl px-10 py-4 rounded-full
+    <div
+        class="flex flex-col md:flex-row items-center md:items-start justify-center w-full gap-12 md:gap-20 mb-20"
+    >
+        <a
+            href="#ContactMe"
+            class="bg-cyan-50 text-cyan-600 font-bold text-xl px-10 py-4 rounded-full
         shadow-[0_0_15px_rgba(8,145,178,0.4)]
         hover:shadow-[0_0_30px_rgba(8,145,178,0.7)] hover:-translate-y-1 hover:scale-105
         transition-all duration-300 ease-out"
-    >
-        {buttonText}
-    </a>
+        >
+            {contactMeText}
+        </a>
+        <a
+            href={buttonHref}
+            class="bg-cyan-50 text-cyan-600 font-bold text-xl px-10 py-4 rounded-full
+    shadow-[0_0_15px_rgba(8,145,178,0.4)]
+    hover:shadow-[0_0_30px_rgba(8,145,178,0.7)] hover:-translate-y-1 hover:scale-105
+    transition-all duration-300 ease-out"
+        >
+            {buttonText}
+        </a>
+    </div>
 </section>
 
 <section
+    id="ContactMe"
     class="w-full min-h-screen bg-[#eafafa] py-24 px-6 flex flex-col items-center justify-center text-black"
 >
     <h2
