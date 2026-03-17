@@ -1,6 +1,20 @@
 ---
 // src/pages/en/projects.astro
 import MainLayout from "../../layouts/MainLayout.astro";
+import ProjectsPage from "../../components/pages/ProjectsPage.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+    <ProjectsPage
+        pageTitle="Projects"
+        buttonText="See the source"
+        projects={[
+            {
+                projectTitle: "AteBitEmu",
+                description: "MOS 6502 emulator built in rust",
+                technologies: ["Rust", "Git"],
+                projectLink: "https://github.com/MarelGuy/atebitemu",
+            },
+        ]}
+    />
+</MainLayout>
