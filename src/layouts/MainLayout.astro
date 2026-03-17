@@ -10,7 +10,7 @@ import ScrollTracker from "../components/ScrollTracker.astro";
 const isEnglish = Astro.url.pathname.startsWith("/en");
 ---
 
-<html lang={isEnglish ? "en" : "it"}>
+<html lang={isEnglish ? "en" : "it"} class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
