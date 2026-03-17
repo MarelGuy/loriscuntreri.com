@@ -15,12 +15,11 @@
                 : 0;
 
         window.latestScrollPercentage = scrollPercentage;
-
-        console.log(window.latestScrollPercentage);
     };
 
     const restoreScrollPosition = () => {
         const savedPercentage = sessionStorage.getItem("savedScroll");
+        console.log(savedPercentage);
 
         if (savedPercentage !== null) {
             const percentage = parseInt(savedPercentage, 10);
