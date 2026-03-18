@@ -3,6 +3,12 @@
 ---
 
 <script>
+    declare global {
+        interface Window {
+            latestScrollPercentage: number;
+        }
+    }
+
     const updateScrollDepth = () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight;
@@ -19,7 +25,6 @@
 
     const restoreScrollPosition = () => {
         const savedPercentage = sessionStorage.getItem("savedScroll");
-        console.log(savedPercentage);
 
         if (savedPercentage !== null) {
             const percentage = parseInt(savedPercentage, 10);
@@ -36,7 +41,7 @@
         }
     };
 
-    document.addEventListener("DOMContentLoaded", restoreScrollPosition);
+    restoreScrollPosition();
 
     window.addEventListener("scroll", updateScrollDepth);
     updateScrollDepth();
