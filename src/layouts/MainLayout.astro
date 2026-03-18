@@ -8,49 +8,44 @@ import LanguageToggle from "../components/LanguageToggle.astro";
 import ScrollTracker from "../components/ScrollTracker.astro";
 
 const isEnglish = Astro.url.pathname.startsWith("/en");
+
+const footerProps = isEnglish
+    ? {
+          directLinks: "Direct links",
+          homeHref: "/en/home",
+          whoami: "Who am I",
+          whoamiHref: "/en/whoami",
+          projects: "Projects",
+          projectsHref: "/en/projects",
+          cvHref: "/en/Loris_Cuntreri_CV.pdf",
+      }
+    : {
+          directLinks: "Link diretti",
+          homeHref: "/it/home",
+          whoami: "Chi sono",
+          whoamiHref: "/it/whoami",
+          projects: "Progetti",
+          projectsHref: "/it/projects",
+          cvHref: "/it/Loris_Cuntreri_CV.pdf",
+      };
 ---
 
 <html lang={isEnglish ? "en" : "it"} class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
         <title>Loris Cuntreri</title>
     </head>
-
     <ScrollTracker />
-
     <body class="bg-black font-sans text-white">
         <Navbar />
-
         <LanguageToggle />
 
         <div class="min-h-screen flex flex-col">
             <slot />
 
-            {
-                isEnglish ? (
-                    <Footer
-                        homeHref="/en/home"
-                        whoami="Who am I"
-                        whoamiHref="/en/whoami"
-                        projects="Projects"
-                        projectsHref="/en/projects"
-                        cvHref="/en/Loris_Cuntreri_CV.pdf"
-                    />
-                ) : (
-                    <Footer
-                        homeHref="/it/home"
-                        whoami="Chi sono"
-                        whoamiHref="/it/whoami"
-                        projects="Progetti"
-                        projectsHref="/it/projects"
-                        cvHref="/it/Loris_Cuntreri_CV.pdf"
-                    />
-                )
-            }
+            <Footer {...footerProps} />
         </div>
     </body>
 </html>

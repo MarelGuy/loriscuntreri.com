@@ -1,6 +1,8 @@
 ---
 // src/components/pages/Projects.astro
 
+import Button from "../Button.astro";
+
 export interface Project {
     projectTitle: string;
     description: string;
@@ -51,17 +53,10 @@ const { pageTitle, buttonText, projects } = Astro.props;
                             </div>
                         </div>
 
-                        <a
-                            href={project.projectLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="bg-cyan-50 text-black font-bold text-lg md:text-xl px-8 py-3 rounded-full
-        shadow-[0_0_15px_rgba(8,145,178,0.4)]
-        hover:shadow-[0_0_30px_rgba(8,145,178,0.7)] hover:-translate-y-1 hover:scale-105
-        transition-all duration-300 ease-out mt-auto"
-                        >
-                            {buttonText}
-                        </a>
+                        <Button
+                            buttonHref={project.projectLink}
+                            buttonText={buttonText}
+                        />
                     </div>
                 ))
             }

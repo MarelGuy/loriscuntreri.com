@@ -1,8 +1,15 @@
 ---
 // src/components/Footer.astro
 
-let { homeHref, whoami, whoamiHref, projects, projectsHref, cvHref } =
-    Astro.props;
+let {
+    directLinks,
+    homeHref,
+    whoami,
+    whoamiHref,
+    projects,
+    projectsHref,
+    cvHref,
+} = Astro.props;
 ---
 
 <footer
@@ -15,7 +22,7 @@ let { homeHref, whoami, whoamiHref, projects, projectsHref, cvHref } =
 
         <div class="flex flex-wrap gap-24 md:gap-40">
             <div class="flex flex-col gap-4">
-                <h3 class="text-xl font-bold mb-2">Link Diretti</h3>
+                <h3 class="text-xl font-bold mb-2">{directLinks}</h3>
                 <a
                     href={homeHref}
                     class="text-lg text-gray-300 hover:text-cyan-300 transition-colors"
