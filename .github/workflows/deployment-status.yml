@@ -5,6 +5,9 @@ on:
     branches:
       - main 
 
+permissions:
+  deployments: write
+
 jobs:
   track-deployment:
     runs-on: ubuntu-latest
