@@ -7,17 +7,18 @@
     <head>
         <meta charset="utf-8" />
         <title>Loris Cuntreri</title>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
         <script>
-            // Read the actual URL path from the browser
             const pathname = window.location.pathname;
+
             let redirectPath = "/en/home";
 
-            // Check if they were trying to access an Italian route
             if (pathname.startsWith("/it/") || pathname === "/it") {
                 redirectPath = "/it/home";
             }
 
-            // Instantly replace the current page with the correct home page
             window.location.replace(redirectPath);
         </script>
     </head>
