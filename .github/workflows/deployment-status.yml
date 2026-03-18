@@ -1,0 +1,26 @@
+name: Record Deployment
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  track-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub Deployment
+        uses: chrnorm/deployment-action@v2
+        id: deployment
+        with:
+          token: '${{ github.token }}'
+          environment: 'Production'
+          environment-url: 'https://www.loriscuntreri.com'
+
+      - name: Update Deployment Status (Success)
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: '${{ github.token }}'
+          environment-url: 'https://www.loriscuntreri.com'
+          state: 'success'
+          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
