@@ -14,6 +14,7 @@ export interface Dictionary {
         home: string;
         whoami: string;
         projects: string;
+        misarum: string;
         cv: string;
     };
     hero: {
@@ -36,6 +37,7 @@ export interface Dictionary {
     contact: {
         title: string;
         mail: string;
+        personalMail: string;
         linkedin: string;
         github: string;
     };
@@ -44,6 +46,13 @@ export interface Dictionary {
         button: string;
         items: Project[];
     };
+    misarum: {
+        title: string;
+        text: string;
+        bullets: string[];
+        link: string;
+        officialLink: string;
+    };
     footer: {
         links: string;
         social: string;
@@ -51,6 +60,7 @@ export interface Dictionary {
         homeLabel: string;
         whoamiLabel: string;
         projectsLabel: string;
+        misarumLabel: string;
     };
 }
 
@@ -59,6 +69,7 @@ const en: Dictionary = {
         home: "Home",
         whoami: "Who am I",
         projects: "Projects",
+        misarum: "Misarum",
         cv: "CV",
     },
     hero: {
@@ -81,6 +92,7 @@ const en: Dictionary = {
     contact: {
         title: "Contact me",
         mail: "By email",
+        personalMail: "Personal email",
         linkedin: "On LinkedIn",
         github: "On Git server",
     },
@@ -105,7 +117,7 @@ const en: Dictionary = {
             {
                 projectTitle: "LilDB",
                 description:
-                    "LilDB has been a staple of my learning process in Rust. Thanks to this project, I learned CLI and gRPC development. The project is not completed yet, but it has been in the works for a lot of time now.",
+                    "LilDB has been a staple of my learning process in Rust. Thanks to this project, I learned CLI and gRPC development. The project is not completed yet, but it has been in the works for a long time now.",
                 technologies: ["Rust", "Git", "gRPC", "Tokio"],
                 projectLink: "https://git.loriscuntreri.com/marel/LilDB",
             },
@@ -118,18 +130,31 @@ const en: Dictionary = {
             {
                 projectTitle: "Jay",
                 description:
-                    "Jay is one of the first public projects I wrote in rust. I started the development while still in high school, this is the main project in which I learned the most about the Rust programming language. This project is also not completed, but it will be, since I have a strong emotional attachment to it.",
+                    "Jay is one of the first public projects I wrote in Rust. I started developing it while still in high school; it is the main project through which I learned the most about the Rust programming language. This project is also unfinished, but it will be completed, since I have a strong emotional attachment to it.",
                 technologies: ["Rust", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/Jay",
             },
             {
                 projectTitle: "WebSpocket",
                 description:
-                    "WebSpocket is the only project written in Deno/TS. Everything started when I noticed that the standard Deno WebSocket library lacked basic features support. Thus, WebSpocket was born. It was never published, because shortly after I finished developing it, Deno published a stable, full-featured release of the WebSocket Library.",
-                technologies: ["Deno", "Typescript", "WebSocket", "Git"],
+                    "WebSpocket is the only project written in Deno/TS. Everything started when I noticed that the standard Deno WebSocket library lacked support for basic features. Thus, WebSpocket was born. It was never published: shortly after I finished developing it, Deno released a stable, full-featured WebSocket library.",
+                technologies: ["Deno", "TypeScript", "WebSocket", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/WebSpocket",
             },
         ],
+    },
+    misarum: {
+        title: "MisarumAI",
+        text: "Misarum is a local AI assistant built for Italian law. It runs entirely on your own infrastructure, indexing official Italian legislation so it can answer legal questions with precise citations — never inventing sources.",
+        bullets: [
+            "Runs locally on your dedicated server — no data leaves your systems",
+            "Indexes official Italian law: codes, laws, decrees and regulations",
+            "Semantic vector search over millions of chunks for real answers",
+            "Every answer comes with exact citations: law, article and source",
+            "If it can't find an answer, it says so instead of guessing",
+        ],
+        link: "Try the demo",
+        officialLink: "Visit the official site",
     },
     footer: {
         links: "Direct links",
@@ -138,6 +163,7 @@ const en: Dictionary = {
         homeLabel: "Home",
         whoamiLabel: "Who am I",
         projectsLabel: "Projects",
+        misarumLabel: "Misarum",
     },
 };
 
@@ -146,6 +172,7 @@ const it: Dictionary = {
         home: "Home",
         whoami: "Chi sono",
         projects: "Progetti",
+        misarum: "Misarum",
         cv: "CV",
     },
     hero: {
@@ -155,19 +182,20 @@ const it: Dictionary = {
     },
     why: {
         title: "Perché scegliere me?",
-        p1: "Nei progetti su cui lavoro dò priorità alla logica e al ragionamento, in modo da rendere ogni scelta di design accurata e professionale.",
-        p2: "Mi concentro molto sulla scrittura di codice efficiente. Utilizzando linter e debugger a mio vantaggio, rendendo il codice efficiente sia sulla memoria, che sul processore.",
+        p1: "Nei progetti su cui lavoro do priorità alla logica e al ragionamento, in modo da rendere ogni scelta di design accurata e professionale.",
+        p2: "Mi concentro molto sulla scrittura di codice efficiente. Utilizzo linter e debugger a mio vantaggio, rendendo il codice efficiente sia in termini di memoria sia di processore.",
         p3: "La passione per il codice è ciò che mi spinge a migliorare; resto al passo con le tecnologie, e ho una grande capacità di apprendimento.",
     },
     whoami: {
         headline: "Chi sono?",
-        text: "Sono un Software Engineer con diversi anni di esperienza. Ho iniziato a programmare in C++ quando frequentavo le scuole superiori e, dopo pochi mesi, mi sono iscritto a un corso di sviluppo web full-stack chiamato «Strive School»; una volta completato il corso, ho lavorato come sviluppatore volontario per il server Discord di Sea of Thieves, creando dashboard web e bot. Ho fatto una pausa per completare gli studi e, dopo aver conseguito il diploma, ho iniziato immediatamente a lavorare per GoSport. Lì ho utilizzato sia Node.js e Deno che Rust per creare applicazioni backend ad alte prestazioni e gestire il database MongoDB. Attualmente lavoro come AI Data Trainer per SME Careers, dove addestro modelli di intelligenza artificiale a riconoscere e generare codice Rust efficiente.",
+        text: "Sono un Software Engineer con diversi anni di esperienza. Ho iniziato a programmare in C++ quando frequentavo le scuole superiori e, dopo pochi mesi, mi sono iscritto a un corso di sviluppo web full-stack chiamato «Strive School»; una volta completato il corso, ho lavorato come sviluppatore volontario per il server Discord di Sea of Thieves, creando dashboard web e bot. Ho fatto una pausa per completare gli studi e, dopo aver conseguito il diploma, ho iniziato immediatamente a lavorare per GoSport. Lì ho utilizzato Node.js/Deno e Rust per creare applicazioni backend ad alte prestazioni e gestire il database MongoDB. Attualmente lavoro come AI Data Trainer per SME Careers, dove addestro modelli di intelligenza artificiale a riconoscere e generare codice Rust efficiente.",
         contactMe: "Contattami",
         viewProjects: "Vedi i miei progetti",
     },
     contact: {
         title: "Contattami",
         mail: "Via email",
+        personalMail: "Email personale",
         linkedin: "Su LinkedIn",
         github: "Sul server Git",
     },
@@ -178,21 +206,21 @@ const it: Dictionary = {
             {
                 projectTitle: "AteBitEmu",
                 description:
-                    "Emulatore MOS 6502 scritto in Rust. Riesce a passare il test scritto da Klaus Normann e può girare sia a 1 MHz che a velocità illimitate. Questo è uno dei pochi progetti in Rust puro che ho realizzato.",
+                    "Emulatore MOS 6502 scritto in Rust. Riesce a passare il test scritto da Klaus Normann e può girare sia a 1 MHz sia a velocità illimitate. Questo è uno dei pochi progetti in Rust puro che ho realizzato.",
                 technologies: ["Rust", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/atebitemu",
             },
             {
                 projectTitle: "SPUD",
                 description:
-                    "SPUD è un formato di file binario che vorrei introdurre nell'ambiente di LilDB. Nonostante non sia ancora in versione stabile, il codice funziona e da dei risultati molto buoni. Sicuramente potrà essere usato in futuro insieme ad un database più serio.",
+                    "SPUD è un formato di file binario che vorrei introdurre nell'ambiente di LilDB. Nonostante non sia ancora in una versione stabile, il codice funziona e dà dei risultati molto buoni. Sicuramente potrà essere usato in futuro insieme a un database più serio.",
                 technologies: ["Rust", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/spud_rs",
             },
             {
                 projectTitle: "LilDB",
                 description:
-                    "LilDB è stato un punto fisso nel mio percorso con Rust. Grazie a questo progetto, ho imparato a scrivere codice per applicazioni da terminale e utilizzare gRPC. Sebbene questo progetto non sia ancora completato, punto a completarlo in futuro, nonostante sia in sviluppo da anni.",
+                    "LilDB è stato un punto fisso nel mio percorso con Rust. Grazie a questo progetto, ho imparato a scrivere codice per applicazioni da terminale e a utilizzare gRPC. Non è ancora completo, ma conto di completarlo in futuro, anche se è in sviluppo da anni.",
                 technologies: ["Rust", "Git", "gRPC", "Tokio"],
                 projectLink: "https://git.loriscuntreri.com/marel/LilDB",
             },
@@ -205,18 +233,31 @@ const it: Dictionary = {
             {
                 projectTitle: "Jay",
                 description:
-                    "Jay è uno dei primi progetti pubblici scritti in rust. Ho iniziato a scrivere Jay durante le scuole superiori, durante la scrittura, ho imparato gran parte di quello che conosco durante questo periodo. Anche questo è un progetto incompleto, sicuramente verrà completato in futuro, essendo un progetto a cui ho un grande attaccamento emotivo.",
+                    "Jay è uno dei primi progetti pubblici scritti in Rust. L'ho iniziato durante le scuole superiori e, scrivendolo, ho imparato gran parte di ciò che so oggi. Anche questo è un progetto incompleto; sicuramente verrà completato in futuro, essendo un progetto a cui sono molto legato.",
                 technologies: ["Rust", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/Jay",
             },
             {
                 projectTitle: "WebSpocket",
                 description:
-                    "WebSpocket è l'unico progetto in Deno/TS completo. Tutto inizia da una frustrazione per la libreria di base per i WebSocket di Deno, che non supportava molte delle funzionalità di base. Da li è nata WebSpocket, anche se non è mai stata pubblicata, visto che sono state aggiunte sulla stable release di Deno, le varie funzioanlità che mancavano prima.",
-                technologies: ["Deno", "Typescript", "WebSocket", "Git"],
+                    "WebSpocket è l'unico progetto completo in Deno/TS. Tutto è nato da una frustrazione verso la libreria di base per i WebSocket di Deno, che non supportava molte delle funzionalità di base. Da lì è nata WebSpocket, anche se non è mai stata pubblicata, visto che sulla stable release di Deno sono state aggiunte le funzionalità che prima mancavano.",
+                technologies: ["Deno", "TypeScript", "WebSocket", "Git"],
                 projectLink: "https://git.loriscuntreri.com/marel/WebSpocket",
             },
         ],
+    },
+    misarum: {
+        title: "MisarumAI",
+        text: "Misarum è un assistente AI locale pensato per il diritto italiano. Gira interamente sulla tua infrastruttura, indicizzando la normativa italiana ufficiale per rispondere alle domande legali con citazioni precise — senza mai inventare le fonti.",
+        bullets: [
+            "Gira in locale sul tuo server dedicato — nessun dato esce dai tuoi sistemi",
+            "Indicizza il diritto italiano ufficiale: codici, leggi, decreti e regolamenti",
+            "Ricerca semantica vettoriale su milioni di chunk per risposte reali",
+            "Ogni risposta arriva con citazioni esatte: legge, articolo e fonte",
+            "Se non trova una risposta, lo dice chiaramente invece di tirare a indovinare",
+        ],
+        link: "Prova la demo",
+        officialLink: "Visita il sito ufficiale",
     },
     footer: {
         links: "Link diretti",
@@ -225,6 +266,7 @@ const it: Dictionary = {
         homeLabel: "Home",
         whoamiLabel: "Chi sono",
         projectsLabel: "Progetti",
+        misarumLabel: "Misarum",
     },
 };
 

@@ -12,6 +12,7 @@ export function Navbar() {
         { id: "home", label: t().nav.home },
         { id: "whoami", label: t().nav.whoami },
         { id: "projects", label: t().nav.projects },
+        { id: "misarum", label: t().nav.misarum },
     ] as { id: Tab; label: string }[];
 
     return (

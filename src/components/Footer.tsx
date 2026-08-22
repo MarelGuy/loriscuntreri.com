@@ -30,6 +30,9 @@ export function Footer() {
                         <button onClick={() => setTab("projects")} class={linkClasses}>
                             {t().footer.projectsLabel}
                         </button>
+                        <button onClick={() => setTab("misarum")} class={linkClasses}>
+                            {t().footer.misarumLabel}
+                        </button>
                         <a
                             href={cvHref()}
                             target="_blank"
@@ -48,7 +51,15 @@ export function Footer() {
                             rel="noopener noreferrer"
                             class={linkClasses}
                         >
-                            Email
+                            {SOCIAL_LINKS.email}
+                        </a>
+                        <a
+                            href={`mailto:${SOCIAL_LINKS.personalEmail}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class={linkClasses}
+                        >
+                            {SOCIAL_LINKS.personalEmail}
                         </a>
                         <a
                             href={SOCIAL_LINKS.linkedin}

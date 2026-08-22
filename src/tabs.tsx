@@ -1,6 +1,6 @@
 import { createContext, createSignal, useContext, type ParentProps } from "solid-js";
 
-export type Tab = "home" | "whoami" | "projects";
+export type Tab = "home" | "whoami" | "projects" | "misarum";
 
 interface TabContextValue {
     tab: () => Tab;

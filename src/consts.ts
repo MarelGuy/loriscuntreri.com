@@ -1,5 +1,6 @@
 export const SOCIAL_LINKS = {
-    email: "irertnuc.loris@gmail.com",
+    email: "jobs@loriscuntreri.com",
+    personalEmail: "personal@loriscuntreri.com",
     linkedin: "https://www.linkedin.com/in/lc0/",
     github: "https://git.loriscuntreri.com/marel",
     githubUsername: "Git server",

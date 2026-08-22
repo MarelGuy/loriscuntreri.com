@@ -8,6 +8,7 @@ import { Hero } from "./sections/Hero";
 import { WhyChooseMe } from "./sections/WhyChooseMe";
 import { WhoAmI } from "./sections/WhoAmI";
 import { Projects } from "./sections/Projects";
+import { Misarum } from "./sections/Misarum";
 import { ContactMe } from "./sections/ContactMe";
 
 function Shell() {
@@ -36,6 +37,9 @@ function Shell() {
                     </Match>
                     <Match when={tab() === "projects"}>
                         <Projects />
+                    </Match>
+                    <Match when={tab() === "misarum"}>
+                        <Misarum />
                     </Match>
                     <Match when={tab() === "home"}>
                         <Hero />
