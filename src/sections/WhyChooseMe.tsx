@@ -10,7 +10,7 @@ export function WhyChooseMe() {
             class="w-full min-h-screen bg-[#d2e4e4] py-24 px-6 flex flex-col justify-center"
         >
             <div class="max-w-3xl mx-auto w-full">
-                <h2 class="text-4xl font-black text-center text-cyan-600 mb-20 tracking-wide">
+                <h2 class="text-4xl font-black text-center text-cyan-800 mb-20 tracking-wide">
                     {t().why.title}
                 </h2>
 
