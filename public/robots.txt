@@ -1,0 +1,3 @@
+User-Agent: *
+Content-Signal: search=yes, ai-train=no
+Allow: /

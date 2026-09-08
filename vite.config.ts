@@ -37,6 +37,7 @@ export default defineConfig({
         tailwindcss(),
         sitemap({
             hostname: "https://www.loriscuntreri.com",
+            generateRobotsTxt: false,
         }),
         inlineCss(),
     ],
