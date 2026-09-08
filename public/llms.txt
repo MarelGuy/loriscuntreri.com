@@ -1,0 +1,36 @@
+# Loris Cuntreri
+
+> Loris Cuntreri is a software engineer specialising in Rust and high-performance backends, with experience in Node.js, Deno, TypeScript and MongoDB. This site is his portfolio: professional background, open-source projects, and contact information.
+
+Loris started programming in C++ in secondary school, completed a full-stack web development course, worked as a backend developer using Node.js/Deno and Rust at GoSport, and now works as an AI Data Trainer for SME Careers, training models to generate efficient Rust code.
+
+## About
+
+- [Home](https://www.loriscuntreri.com/): Portfolio homepage with a summary of why to work with Loris.
+- [Curriculum Vitae (English)](https://www.loriscuntreri.com/en/Loris_Cuntreri_CV.pdf): Downloadable CV in English.
+- [Curriculum Vitae (Italian)](https://www.loriscuntreri.com/it/Loris_Cuntreri_CV.pdf): Downloadable CV in Italian.
+
+## Projects
+
+- [AteBitEmu](https://git.loriscuntreri.com/marel/atebitemu): MOS 6502 emulator written in Rust that passes Klaus Normann's functional test.
+- [SPUD](https://git.loriscuntreri.com/marel/spud_rs): Binary file format for databases, written in Rust.
+- [LilDB](https://git.loriscuntreri.com/marel/LilDB): In-development database written in Rust, with CLI and gRPC interfaces.
+- [LilDBSh](https://git.loriscuntreri.com/marel/LilDBSh): Shell client for LilDB.
+- [Jay](https://git.loriscuntreri.com/marel/Jay): Early Rust project through which Loris learned much of the language.
+- [WebSpocket](https://git.loriscuntreri.com/marel/WebSpocket): WebSocket library for Deno/TypeScript.
+- [Git server](https://git.loriscuntreri.com/marel): All public repositories.
+
+## Misarum
+
+- [Misarum](https://misarum.it): Local AI assistant for Italian law that runs on your own infrastructure and indexes official Italian legislation.
+- [Misarum demo](https://app.misarum.it): Demo application for Misarum.
+
+## Contact
+
+- [Jobs email](mailto:jobs@loriscuntreri.com): jobs@loriscuntreri.com
+- [Personal email](mailto:personal@loriscuntreri.com): personal@loriscuntreri.com
+- [LinkedIn](https://www.linkedin.com/in/lc0/): Loris Cuntreri's LinkedIn profile.
+
+## Optional
+
+- [Projects section](https://www.loriscuntreri.com/): The homepage, which lists all projects in more detail.
