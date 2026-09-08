@@ -24,6 +24,9 @@ importers:
       vite:
         specifier: latest
         version: 8.2.2(jiti@2.7.0)
+      vite-plugin-sitemap:
+        specifier: ^0.8.2
+        version: 0.8.2
       vite-plugin-solid:
         specifier: latest
         version: 2.11.14(solid-js@1.9.15)(vite@8.2.2(jiti@2.7.0))
@@ -798,6 +801,9 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
+  vite-plugin-sitemap@0.8.2:
+    resolution: {integrity: sha512-bqIw6NVOXg6je81lzX8Lm0vjf8/QSAp8di8fYQzZ3ZdVicOm8+6idBGALJiy1R1FiXNIK8rgORO6HBqXyHW+iQ==}
+
   vite-plugin-solid@2.11.14:
     resolution: {integrity: sha512-7ZVBt8rpoyqmlwin2kRIUveaHoF6/kulY7gsnD+qFh4nS29V4OPAnw+ojoAspXIjObiL9o1xh9a/nTuYHm02Rw==}
     peerDependencies:
@@ -1477,6 +1483,8 @@ snapshots:
       browserslist: 4.28.9
       escalade: 3.2.0
       picocolors: 1.1.1
+
+  vite-plugin-sitemap@0.8.2: {}
 
   vite-plugin-solid@2.11.14(solid-js@1.9.15)(vite@8.2.2(jiti@2.7.0)):
     dependencies:

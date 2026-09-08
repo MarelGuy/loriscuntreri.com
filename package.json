@@ -16,6 +16,7 @@
     "tailwindcss": "latest",
     "typescript": "latest",
     "vite": "latest",
+    "vite-plugin-sitemap": "^0.8.2",
     "vite-plugin-solid": "latest"
   },
   "allowScripts": {
