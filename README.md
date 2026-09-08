@@ -8,14 +8,14 @@ Single-page application built with **SolidJS** + **Vite** + **Tailwind CSS v4**.
 
 | Command               | Action                          |
 | :-------------------- | :------------------------------ |
-| `npm install`         | Installs dependencies           |
-| `npm run dev`         | Starts local dev server         |
-| `npm run build`       | Builds production site to `dist/` |
-| `npm run preview`     | Previews the build locally      |
+| `pnpm install`        | Installs dependencies           |
+| `pnpm run dev`        | Starts local dev server         |
+| `pnpm run build`      | Builds production site to `dist/` |
+| `pnpm run preview`    | Previews the build locally      |
 
 ## Deploy
 
-Build with `npm run build`, then copy `dist/` to `/var/www/loriscuntreri.com/html` (nginx serves it as an SPA via `try_files $uri $uri/ /index.html`).
+Build with `pnpm run build`, then copy `dist/` to `/var/www/loriscuntreri.com/html` (nginx serves it as an SPA via `try_files $uri $uri/ /index.html`).
 
 ## Structure
 
