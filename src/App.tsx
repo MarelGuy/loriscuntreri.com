@@ -1,4 +1,4 @@
-import { createEffect, Switch, Match } from "solid-js";
+import { createEffect, Switch, Match, onCleanup } from "solid-js";
 import { LanguageProvider, useLang } from "./i18n";
 import { TabProvider, useTab } from "./tabs";
 import { Navbar } from "./components/Navbar";
@@ -16,7 +16,20 @@ function Shell() {
     const { tab } = useTab();
 
     createEffect(() => {
-        document.documentElement.lang = lang();
+        const current = lang();
+        document.documentElement.lang = current;
+
+        // Keep the Keep Android Open banner in sync with the site language.
+        const slot = document.getElementById("kao-banner");
+        if (!slot) return;
+
+        slot.innerHTML = "";
+
+        const script = document.createElement("script");
+        script.src = `https://keepandroidopen.org/banner.js?id=kao-banner&lang=${current}&size=minimal&animation=off`;
+        document.body.appendChild(script);
+
+        onCleanup(() => script.remove());
     });
 
     createEffect(() => {

@@ -16,7 +16,7 @@ export function Navbar() {
     ] as { id: Tab; label: string }[];
 
     return (
-        <nav class="fixed top-0 left-0 w-full z-50 bg-transparent flex justify-center items-center gap-3 sm:gap-6 md:gap-12 pt-4 md:pt-8 pb-4 px-2 flex-wrap">
+        <nav class="sticky top-0 left-0 w-full z-50 bg-transparent flex justify-center items-center gap-3 sm:gap-6 md:gap-12 pt-4 md:pt-8 pb-4 px-2 flex-wrap">
             <For each={tabs()}>
                 {(link) => (
                     <button
